@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
 import {Menu} from "../../components/menu/Menu";
 
-const items = ['Home', 'Skills', 'Works', 'Testimony', 'Contacts']
+const items = ['Home', 'Skills', 'Works', 'About Me', 'Contacts']
 export const Header = () => {
     return (
         <StyledHeader>
