@@ -6,6 +6,7 @@ import {Works} from "./layout/sections/works/Works";
 import {AboutMe} from "./layout/sections/aboutMe/AboutMe";
 import {Contact} from "./layout/sections/contact/Contact";
 import {Slogan} from "./layout/sections/slogan/Slogan";
+import {Footer} from "./layout/footer/Footer";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <AboutMe/>
             <Contact/>
             <Slogan/>
+            <Footer/>
         </div>
     );
 }
