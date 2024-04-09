@@ -2,7 +2,7 @@ import React from 'react';
 import iconsSprite from '../../assets/images/icons-sprite.svg'
 
 
-type IconIdProps = {
+export type IconIdProps = {
     iconId: string
     width?: string
     height?: string

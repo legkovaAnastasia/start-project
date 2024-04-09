@@ -64,8 +64,8 @@ const Name = styled.h2`
             display: inline-block;
             width: 100%;
             height: 20px;
-            background-color: ${theme.colors.secondary};
-
+            background-image: linear-gradient(90deg, #4ec6da, #79dfca);
+            -webkit-background-clip: content;
             position: absolute;
             bottom: 0;
             z-index: -1;
@@ -87,7 +87,7 @@ const PhotoWrapper = styled.div`
         content: '';
         width: 220px;
         height: 400px;
-        border: 5px solid ${theme.colors.secondary};
+        border: 5px solid ${theme.colors.decoration};
         position: absolute;
         left: 10px;
         bottom: -20px;
