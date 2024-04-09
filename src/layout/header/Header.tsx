@@ -5,6 +5,7 @@ import {Menu} from "../../components/menu/Menu";
 import {Container} from "../../components/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {theme} from "../../styles/Theme";
+import {HeaderMenu} from "./headerMenu/HeaderMenu";
 
 const items = ['Home', 'Skills', 'Works', 'About Me', 'Contacts']
 export const Header = () => {
@@ -22,6 +23,10 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
     background-color: ${theme.colors.primary};
-    color: #DBEBEA;
-    padding: 10px 0;
+    padding: 5px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
 `

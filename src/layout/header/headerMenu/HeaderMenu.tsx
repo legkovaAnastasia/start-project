@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from "styled-components";
 
-export const Menu = (props: {menuItems: Array<string>}) => {
+export const HeaderMenu = (props: {menuItems: Array<string>}) => {
     return (
-        <StyledMenu>
+        <StyledHeaderMenu>
             <ul>
                 {props.menuItems.map((item, index)=> {
                     return <ListItem key={index}>
@@ -11,25 +11,22 @@ export const Menu = (props: {menuItems: Array<string>}) => {
                     </ListItem>
                 })}
             </ul>
-        </StyledMenu>
+        </StyledHeaderMenu>
     );
 };
 
-const StyledMenu = styled.nav`
+const StyledHeaderMenu = styled.nav`
     ul {
         display: flex;
         gap: 30px;
         justify-content: center;
+        
+        a {
+            color: #DBEBEA;
+        }
     }
 `
 
 const ListItem = styled.li`
 `
-const Link = styled.a`
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 55px;
-    text-align: center;
-    color: #DBEBEA;
-`
+const Link = styled.a``
