@@ -5,7 +5,6 @@ import {Menu} from "../../components/menu/Menu";
 import {Container} from "../../components/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {theme} from "../../styles/Theme";
-import {HeaderMenu} from "./headerMenu/HeaderMenu";
 
 const items = ['Home', 'Skills', 'Works', 'About Me', 'Contacts']
 export const Header = () => {
