@@ -16,7 +16,7 @@ export const GlobalStyles = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         background-color: ${theme.colors.primary};
-        line-height: 1.2;
+        line-height: 1.5;
         color: ${theme.colors.secondary};
     }
 
@@ -32,8 +32,20 @@ export const GlobalStyles = createGlobalStyle`
         background-color: unset;
         border: none;
     }
-    
+
     section {
         padding: 100px 0;
+    }
+
+    h3 {
+        font-family: 'Josefine Sans', sans-serif;
+        font-weight: 700;
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 14px;
     }
 `

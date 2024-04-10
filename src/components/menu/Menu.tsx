@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from "styled-components";
+import {Link, LinkProps} from "../Link";
 
-export const Menu = (props: {menuItems: Array<string>}) => {
+export const Menu = (props: { menuItems: Array<string>}&LinkProps) => {
     return (
         <StyledMenu>
             <ul>
-                {props.menuItems.map((item, index)=> {
+                {props.menuItems.map((item, index) => {
                     return <ListItem key={index}>
-                        <Link href="">{item}</Link>
+                        <Link href="" type={props.type}>{item}</Link>
                     </ListItem>
                 })}
             </ul>
@@ -24,12 +25,4 @@ const StyledMenu = styled.nav`
 `
 
 const ListItem = styled.li`
-`
-const Link = styled.a`
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 55px;
-    text-align: center;
-    color: #DBEBEA;
 `
