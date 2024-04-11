@@ -4,20 +4,26 @@ import {Icon} from "../../../components/icon/Icon";
 import {Slider} from "../../../components/slider/Slider";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {FlexWrapper} from "../../../components/FlexWrapper";
+import {IconWrapper} from "../skills/skil/Skill";
 
 export const AboutMe = () => {
     return (
-        <StyletAbout>
+        <StyledAbout>
             <SectionTitle>About Me</SectionTitle>
             <FlexWrapper direction={"column"} align={"center"}>
-                <Icon iconId={'quote'}/>
+                <IconWrapper>
+                    <Icon iconId={'quote'}/>
+                </IconWrapper>
                 <Slider/>
             </FlexWrapper>
-        </StyletAbout>
+        </StyledAbout>
     );
 };
 
-const StyletAbout = styled.section`
+const StyledAbout = styled.section`
     min-height: 50vh;
-    background-color: #b9d3ec;
+    
+    ${IconWrapper} {
+        margin: 30px 0 72px;
+    }
 `
