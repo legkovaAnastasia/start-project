@@ -21,8 +21,7 @@ export const AboutMe = () => {
 };
 
 const StyledAbout = styled.section`
-    min-height: 50vh;
-    
+  
     ${IconWrapper} {
         margin: 30px 0 72px;
     }
