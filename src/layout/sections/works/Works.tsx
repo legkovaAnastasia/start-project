@@ -17,11 +17,11 @@ export const Works = (props: LinkProps) => {
             <Container>
                 <SectionTitle>My Works</SectionTitle>
                 <Menu menuItems={worksItems} type={'decorated'}/>
-                <FlexWrapper justify={'space-between'}>
+                <FlexWrapper justify={'space-between'} align={'flex-start'}>
                     <Work title={"Social network"}
                           text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
                           src={socialImg}
-                    type={props.type}/>
+                          type={props.type}/>
                     <Work title={"Todolist"}
                           text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
                           src={todolistImg}/>

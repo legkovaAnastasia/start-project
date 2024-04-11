@@ -30,7 +30,9 @@ export const GlobalStyles = createGlobalStyle`
 
     button {
         background-color: unset;
+        color: ${theme.colors.light};
         border: none;
+        cursor: pointer;
     }
 
     section {
@@ -47,5 +49,6 @@ export const GlobalStyles = createGlobalStyle`
     p {
         font-weight: 400;
         font-size: 14px;
+        color: ${theme.colors.text};
     }
 `

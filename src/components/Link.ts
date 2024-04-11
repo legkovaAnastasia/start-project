@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import {theme} from "../styles/Theme";
 
 export type LinkProps = {
@@ -15,7 +15,7 @@ export const Link = styled.a<LinkProps>`
     position: relative;
     z-index: 0;
 
-    ${props => props.type === 'decorated' && `
+    ${props => props.type === 'decorated' && css`
     &:hover {
         &::before{
             height: 10px;
@@ -23,18 +23,19 @@ export const Link = styled.a<LinkProps>`
     }`
     }
 
-    ${props => props.type && `
-    margin-bottom: 10px;
-    &::before {
-   content:'';
-   display: inline-block;
-   background-color: ${theme.colors.decoration};
-   
-   position: absolute; 
-   bottom: 8px;
-   left: 0;
-   right: 0;
-   z-index: -1;
-   }
+    ${props => props.type && css`
+        margin-bottom: 10px;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            background-color: ${theme.colors.decoration};
+
+            position: absolute;
+            bottom: 8px;
+            left: 0;
+            right: 0;
+            z-index: -1;
+        }
     `}
 `
