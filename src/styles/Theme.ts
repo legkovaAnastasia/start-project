@@ -6,7 +6,9 @@ export const theme = {
         light: '#DBEBEA',
         decoration:'#27c8d5'
     },
-    linkDecoration: {
 
+    media: {
+        tablet: 'screen and (max-width: 768px)',
+        mobile: 'screen and (max-width: 576px)',
     }
 }

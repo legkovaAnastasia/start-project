@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {Link, LinkProps} from "../Link";
+import {theme} from "../../styles/Theme";
 
 export const Menu = (props: { menuItems: Array<string>}&LinkProps) => {
     return (
@@ -21,6 +22,10 @@ const StyledMenu = styled.nav`
         display: flex;
         gap: 30px;
         justify-content: center;
+    }
+    
+    @media ${theme.media.tablet} {
+        display: none;
     }
 `
 
