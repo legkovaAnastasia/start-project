@@ -4,12 +4,13 @@ import photo from '../../../assets/images/photo.jpg'
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
+import {font} from "../../../styles/Common";
 
 export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper align={"center"} justify={"space-between"}>
+                <FlexWrapper align={"center"} justify={"space-around"} wrap={'wrap'}>
                     <div>
                         <SmallText>Hi everybody</SmallText>
                         <Name>I'm <span>Anastasia Legkova</span></Name>
@@ -33,19 +34,19 @@ const Photo = styled.img`
     width: 200px;
     height: 350px;
     object-fit: cover;
+    margin-right: 20px;
 `
 
 const MainTitle = styled.h1`
-    font-weight: 400;
-    font-size: 27px;
+    ${font({
+        weight: 400, Fmax: 50, Fmin:27})}
     background-image: linear-gradient(90deg, #79dfca, #4ec6da);
     color: transparent;
     -webkit-background-clip: text;
 `
 const Name = styled.h2`
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 700;
-    font-size: 50px;
+    ${font({
+        family:"'Josefin Sans', sans-serif", weight: 700, Fmax: 50, Fmin:36})}
     letter-spacing: 0.05rem;
     margin: 10px 0;
     background-image: linear-gradient(90deg, #79dfca, #4ec6da);
@@ -53,6 +54,7 @@ const Name = styled.h2`
     -webkit-background-clip: text;
 
     span {
+        white-space: nowrap;
         background-image: linear-gradient(90deg, #79dfca, #4ec6da);
         color: transparent;
         -webkit-background-clip: text;
@@ -71,18 +73,21 @@ const Name = styled.h2`
             z-index: -1;
         }
     }
+    
+    @media ${theme.media.mobile} {
+        margin: 15px 0 22px;
+    }
 `
 
 const SmallText = styled.span`
     font-weight: 400;
     font-size: 16px;
     color: ${theme.colors.secondary};
-
 `
 
 const PhotoWrapper = styled.div`
     position: relative;
-    
+    margin-top: 65px;
     &::before {
         content: '';
         width: 220px;

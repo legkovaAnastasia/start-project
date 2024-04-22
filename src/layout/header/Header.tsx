@@ -23,11 +23,11 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-    background-color: ${theme.colors.primary};
-    padding: 5px 0;
+    background-color: rgba(38, 50, 56, 0.7);
+    padding: 20px 0;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 9999;
+    z-index: 999;
 `
