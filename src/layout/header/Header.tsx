@@ -25,7 +25,7 @@ export const Header = () => {
 const StyledHeader = styled.header`
     background-color: rgba(38, 50, 56, 0.7);
     padding: 20px 0;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;

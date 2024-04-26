@@ -1,16 +1,15 @@
-import React from 'react';
 import styled from "styled-components";
 import {theme} from "../styles/Theme";
 
 export const SectionTitle = styled.h2`
-     text-align: center;
+    text-align: center;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 600;
     font-size: 36px;
     letter-spacing: 5px;
-    position: relative;
     margin-bottom: 90px;
-    
+    position: relative;
+
     &::before {
         content: "";
         display: inline-block;
@@ -21,6 +20,10 @@ export const SectionTitle = styled.h2`
         bottom: -30px;
         left: 50%;
         transform: translateX(-50%);
+
+        @media ${theme.media.mobile} {
+            bottom: -24px;
+        }
     }
 `
 
