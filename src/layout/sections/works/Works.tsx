@@ -17,7 +17,7 @@ export const Works = (props: LinkProps) => {
             <Container>
                 <SectionTitle>My Works</SectionTitle>
                 <Menu menuItems={worksItems} type={'decorated'} ulType={'worksMenu'}/>
-                <FlexWrapper justify={'space-between'} align={'flex-start'}>
+                <FlexWrapper justify={'space-between'} align={'flex-start'} wrap={'wrap'}>
                     <Work title={"Social network"}
                           text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
                           src={socialImg}
@@ -32,5 +32,8 @@ export const Works = (props: LinkProps) => {
 };
 
 const StyledWorks = styled.section`
+    ${FlexWrapper} {
+        gap: 30px;
+    }
 `
 
