@@ -16,7 +16,7 @@ export const Works = (props: LinkProps) => {
         <StyledWorks>
             <Container>
                 <SectionTitle>My Works</SectionTitle>
-                <Menu menuItems={worksItems} type={'decorated'}/>
+                <Menu menuItems={worksItems} type={'decorated'} ulType={'worksMenu'}/>
                 <FlexWrapper justify={'space-between'} align={'flex-start'}>
                     <Work title={"Social network"}
                           text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
