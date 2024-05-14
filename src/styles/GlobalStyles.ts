@@ -18,6 +18,7 @@ export const GlobalStyles = createGlobalStyle`
         background-color: ${theme.colors.primary};
         line-height: 1.5;
         color: ${theme.colors.secondary};
+        min-width: 360px;
     }
 
     a {

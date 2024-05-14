@@ -4,18 +4,18 @@ import {Icon} from "../../../components/icon/Icon";
 import {Slider} from "../../../components/slider/Slider";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {FlexWrapper} from "../../../components/FlexWrapper";
-import {IconWrapper} from "../skills/skil/Skill";
 import {Container} from "../../../components/Container";
+import { S } from '../skills/Skills_Styles';
 
-export const AboutMe = () => {
+export const AboutMe: React.FC = () => {
     return (
         <StyledAbout>
             <Container>
                 <SectionTitle>About Me</SectionTitle>
                 <FlexWrapper direction={"column"} align={"center"}>
-                    <IconWrapper>
+                    <S.IconWrapper>
                         <Icon iconId={'quote'}/>
-                    </IconWrapper>
+                    </S.IconWrapper>
                     <Slider/>
                 </FlexWrapper>
             </Container>
@@ -25,7 +25,7 @@ export const AboutMe = () => {
 
 const StyledAbout = styled.section`
 
-    ${IconWrapper} {
+    ${S.IconWrapper} {
         margin: 30px 0 72px;
     }
 `

@@ -1,73 +1,36 @@
 import React from 'react';
-import styled from "styled-components";
 import {Icon} from "../../components/icon/Icon";
 import {FlexWrapper} from "../../components/FlexWrapper";
-import {theme} from "../../styles/Theme";
-import {font} from "../../styles/Common";
+import { S } from './Footer_Styles';
 
-export const Footer = () => {
+const contactsData = [
+    {
+        iconId: 'in',
+        viewBox: '-3 -3 30 30'
+    },
+    {
+        iconId: 'tg',
+        viewBox: '-5 -4 33 33'
+    }
+]
+export const Footer: React.FC = () => {
     return (
-        <StyledFooter>
+        <S.StyledFooter>
             <FlexWrapper direction={"column"} align={"center"} >
-                <Name>Anastasia</Name>
-                <SocialList>
-                    <SocialItem>
-                        <SocialLink>
-                            <Icon iconId={'in'} viewBox={'-3 -3 30 30'}/>
-                        </SocialLink>
-                    </SocialItem>
-                    <SocialItem>
-                        <SocialLink>
-                            <Icon iconId={'tg'} viewBox={'-5 -4 33 33'}/>
-                        </SocialLink>
-                    </SocialItem>
-                </SocialList>
-                <Copyright>© 2024 Anastasia Legkova. All rights reserved</Copyright>
+                <S.Name>Anastasia</S.Name>
+                <S.SocialList>
+                    {contactsData.map((contacts, index)=>{
+                        return(
+                            <S.SocialItem>
+                                <S.SocialLink>
+                                    <Icon key={index} iconId={contacts.iconId} viewBox={contacts.viewBox}/>
+                                </S.SocialLink>
+                            </S.SocialItem>
+                        )
+                    })}
+                </S.SocialList>
+                <S.Copyright>© 2024 Anastasia Legkova. All rights reserved</S.Copyright>
             </FlexWrapper>
-        </StyledFooter>
+        </S.StyledFooter>
     );
 };
-
-const StyledFooter = styled.footer`
-    padding: 40px 0 40px;
-`
-
-const Name = styled.h4`
-    ${font({family: "'Josefin Sans', sans-serif", weight: 700, Fmax: 22, Fmin: 16})}
-    letter-spacing: 2px;
-    color: ${theme.colors.secondary};
-`
-
-const SocialList = styled.ul`
-    display: flex;
-    gap: 20px;
-    margin: 30px 0;
-`
-
-const SocialItem = styled.li`
-
-`
-
-const SocialLink = styled.a`
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    color: ${theme.colors.secondary};
-    
-    &:hover {
-        color: ${theme.colors.primary};
-        transform: translateY(-4px);
-    }
-`
-
-const Copyright = styled.small`
-    font-weight: 400;
-    font-size: 12px;
-    text-align: center;
-    opacity: 0.5;
-`

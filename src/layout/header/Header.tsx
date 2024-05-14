@@ -1,32 +1,35 @@
 import React from 'react';
-import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
 import {Menu} from "../../components/menu/Menu";
 import {Container} from "../../components/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {MobileMenu} from "../../components/menu/MobileMenu";
+import {S} from "./Header_Styles";
 
 const items = ['Home', 'Skills', 'Works', 'About Me', 'Contacts']
-export const Header = () => {
+export const Header: React.FC = () => {
+
+    const [width, setWidth] = React.useState(window.innerWidth);
+    const breakpoint = 768;
+
+    React.useEffect(() => {
+        const handleWindowResize = () => setWidth(window.innerWidth);
+        window.addEventListener("resize", handleWindowResize);
+        return () => window.removeEventListener("resize", handleWindowResize);
+    }, [])
+
     return (
-        <StyledHeader>
+        <S.Header>
             <Container>
                 <FlexWrapper justify={"space-between"} align={"center"}>
                     <Logo/>
-                    <Menu menuItems={items} type={'decorated'} ulType={'headerMenu'}/>
-                    <MobileMenu menuItems={items} type={'decorated'}/>
+                    {width < breakpoint ?
+                        <MobileMenu menuItems={items} type={'decorated'}/> :
+                        <Menu menuItems={items} type={'decorated'} ulType={'headerMenu'}/>
+                    }
                 </FlexWrapper>
             </Container>
-        </StyledHeader>
+        </S.Header>
     );
 };
 
-const StyledHeader = styled.header`
-    background-color: rgba(38, 50, 56, 0.7);
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-`
