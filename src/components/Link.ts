@@ -2,7 +2,8 @@ import styled, {css} from "styled-components";
 import {theme} from "../styles/Theme";
 
 export type LinkProps = {
-    type?:'decorated'
+    type:'decorated'
+    // children: JSX.Element|JSX.Element[]
 }
 export const Link = styled.a<LinkProps>`
     font-family: 'Josefin Sans', sans-serif;

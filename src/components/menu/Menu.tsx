@@ -10,7 +10,10 @@ export type MenuProps = {
 export const Menu: React.FC<MenuProps & LinkProps> = (props: MenuProps & LinkProps) => {
     return (
         <S.StyledMenu ulType={props.ulType}>
-            <MenuItem menuItems={props.menuItems} type={props.type}/>
+            <MenuItem menuItems={props.menuItems}
+                      type={props.type}
+                      ulType={props.ulType}
+            />
         </S.StyledMenu>
     );
 };
