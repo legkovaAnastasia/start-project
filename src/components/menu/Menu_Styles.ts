@@ -40,7 +40,7 @@ const MobileMenuPopUp = styled.div<{ isOpen: boolean }>`
     right: 0;
     bottom: 0;
     z-index: 999;
-    background-color: rgba(38, 50, 56, 0.6);
+    background-color: rgba(38, 50, 56, 0.8);
     display: none;
 
     ${props => props.isOpen && css<{ isOpen: boolean }>`
