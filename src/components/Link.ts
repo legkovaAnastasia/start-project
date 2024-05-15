@@ -2,10 +2,10 @@ import styled, {css} from "styled-components";
 import {theme} from "../styles/Theme";
 
 export type LinkProps = {
-    type:'decorated'
+    type: 'decorated'
     // children: JSX.Element|JSX.Element[]
 }
-export const Link = styled.a<LinkProps>`
+export const Link = styled.a<LinkProps & { active?: boolean }>`
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
     font-size: 15px;
@@ -17,14 +17,14 @@ export const Link = styled.a<LinkProps>`
     z-index: 0;
 
     ${props => props.type === 'decorated' && css`
-    &:hover {
-        &::before{
-            height: 10px;
-        }
-    }`
+        &:hover {
+            &::before {
+                height: 10px;
+            }
+        }`
     }
 
-    ${props => props.type && css`
+    ${props => props.type && css<LinkProps & { active?: boolean }>`
         margin-bottom: 10px;
 
         &::before {
@@ -37,6 +37,11 @@ export const Link = styled.a<LinkProps>`
             left: 0;
             right: 0;
             z-index: -1;
+            ${props => props.active && css`
+                height: 10px;
+            `}
         }
     `}
+            
+
 `

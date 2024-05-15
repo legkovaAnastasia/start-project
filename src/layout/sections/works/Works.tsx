@@ -6,7 +6,7 @@ import socialImg from './../../../assets/images/social.png'
 import todolistImg from './../../../assets/images/todolist.jpg'
 import {Container} from "../../../components/Container";
 import {S} from './Works_Styles';
-import {WorksMenu} from "../../../components/menu/WorksMenu";
+import {TabStatusType, WorksMenu} from "../../../components/menu/WorksMenu";
 
 const worksItems: Array<{ status:'ALL'| 'REACT'| 'LANDING PAGE'| 'SPA' }> = [
     {status: 'ALL'},
@@ -32,7 +32,7 @@ const workData = [
 
 export const Works: React.FC = () => {
 
-    const [currentStatus, setCurrentStatus] = useState('ALL');
+    const [currentStatus, setCurrentStatus] = useState<TabStatusType>('ALL');
     let filteredWorks = workData
     if (currentStatus === 'LANDING PAGE') {
         filteredWorks = workData.filter(work => work.type === 'LANDING PAGE');
@@ -52,7 +52,12 @@ export const Works: React.FC = () => {
         <S.StyledWorks>
             <Container>
                 <SectionTitle>My Works</SectionTitle>
-                <WorksMenu tabItems={worksItems} type={'decorated'} ulType={'worksMenu'} changeStatus={changeStatus}/>
+                <WorksMenu tabItems={worksItems}
+                           type={'decorated'}
+                           ulType={'worksMenu'}
+                           changeStatus={changeStatus}
+                           currentStatus={currentStatus}
+                />
                 <FlexWrapper justify={'space-between'} align={'flex-start'} wrap={'wrap'}>
 
                     {filteredWorks.map((work, index) => {
