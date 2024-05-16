@@ -21,6 +21,10 @@ const MainTitle = styled.h1`
     background-image: linear-gradient(90deg, #79dfca, #4ec6da);
     color: transparent;
     -webkit-background-clip: text;
+
+    p {
+        display: none;  
+    }
 `
 const Name = styled.h2`
     ${font({
