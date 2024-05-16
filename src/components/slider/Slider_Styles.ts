@@ -3,9 +3,12 @@
 
 const StyledSlider = styled.div`
     max-width: 500px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    border: 1px solid blue;
 `
 
 const Slide = styled.div`
@@ -13,7 +16,6 @@ const Slide = styled.div`
 `
 
 const Text = styled.p`
-    margin-bottom: 40px;
 `
 
 const Pagination = styled.div`
@@ -28,7 +30,7 @@ const Pagination = styled.div`
             margin-left: 10px;
         }
 
-        &.active {
+        &active {
             background-color: ${theme.colors.secondary};
             width: 20px;
         }
