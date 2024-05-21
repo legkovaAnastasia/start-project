@@ -9,7 +9,7 @@ import { S } from '../skills/Skills_Styles';
 
 export const AboutMe: React.FC = () => {
     return (
-        <StyledAbout>
+        <StyledAbout id={'aboutme'}>
             <Container>
                 <SectionTitle>About Me</SectionTitle>
                 <FlexWrapper direction={"column"} align={"center"}>
@@ -27,5 +27,6 @@ const StyledAbout = styled.section`
 
     ${S.IconWrapper} {
         margin: 30px 0 72px;
+        padding-top: 60px;
     }
 `

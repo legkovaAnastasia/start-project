@@ -8,6 +8,7 @@ export const SectionTitle = styled.h2`
     font-size: 36px;
     letter-spacing: 5px;
     margin-bottom: 90px;
+    padding-top: 30px;
     position: relative;
 
     &::before {

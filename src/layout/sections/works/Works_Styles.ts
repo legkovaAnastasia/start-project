@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
-import {Link} from "../../../components/Link";
 import {Button} from "../../../components/Button";
 import {FlexWrapper} from "../../../components/FlexWrapper";
+import {NavLink} from "../../../components/Link";
 
 const StyledWorks = styled.section`
     ${FlexWrapper} {
@@ -14,10 +14,10 @@ const StyledWork = styled.div`
     width: 330px;
     flex-grow: 1;
 
-    ${Link} {
+    ${NavLink} {
         padding: 10px 0;
 
-        & + ${Link} {
+        & + ${NavLink} {
             margin-left: 20px;
         }
     }

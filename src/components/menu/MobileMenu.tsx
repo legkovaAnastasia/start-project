@@ -20,7 +20,7 @@ export const MobileMenu: React.FC<MenuProps & LinkProps> = (props: MenuProps & L
             <S.MobileMenuPopUp isOpen={isOpen} onClick={() => {
                 setIsOpen(false)
             }}>
-                <MenuItem menuItems={props.menuItems} type={props.type}/>
+                <MenuItem items={props.items} type={props.type}/>
             </S.MobileMenuPopUp>
         </S.StyledMobileMenu>
     );

@@ -4,13 +4,18 @@ import {MenuItem} from "./MenuItem";
 import {S} from "./Menu_Styles";
 
 export type MenuProps = {
-    menuItems: Array<string>
+    items: Array<ItemProps>
     ulType?: string
 }
+type ItemProps = {
+    title: string,
+    href:string
+}
+
 export const Menu: React.FC<MenuProps & LinkProps> = (props: MenuProps & LinkProps) => {
     return (
         <S.StyledMenu ulType={props.ulType}>
-            <MenuItem menuItems={props.menuItems}
+            <MenuItem items={props.items}
                       type={props.type}
                       ulType={props.ulType}
             />

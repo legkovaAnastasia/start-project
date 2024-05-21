@@ -1,7 +1,7 @@
 import React from 'react';
- import {Link} from "../../../../components/Link";
- import {Button} from "../../../../components/Button";
-import { S } from '../Works_Styles';
+import {Button} from "../../../../components/Button";
+import {S} from '../Works_Styles';
+import {NavLink} from "../../../../components/Link";
 
 
 type WorkProps = {
@@ -19,8 +19,8 @@ export const Work: React.FC<WorkProps> = (props: WorkProps) => {
             <S.Description>
                 <S.Title>{props.title}</S.Title>
                 <S.Text>{props.text}</S.Text>
-                <Link active href={''} type={'decorated'}>DEMO</Link>
-                <Link href={''} type={'decorated'}>CODE</Link>
+                <NavLink active to={''} type={'decorated'}>DEMO</NavLink>
+                <NavLink to={''} type={'decorated'}>CODE</NavLink>
             </S.Description>
         </S.StyledWork>
     );

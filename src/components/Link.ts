@@ -1,11 +1,11 @@
 import styled, {css} from "styled-components";
 import {theme} from "../styles/Theme";
+import {Link} from "react-scroll";
 
 export type LinkProps = {
     type: 'decorated'
-    // children: JSX.Element|JSX.Element[]
 }
-export const Link = styled.a<LinkProps & { active?: boolean }>`
+export const NavLink = styled(Link)<LinkProps & { active?: boolean }>`
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
     font-size: 15px;
@@ -17,7 +17,7 @@ export const Link = styled.a<LinkProps & { active?: boolean }>`
     z-index: 0;
 
     ${props => props.type === 'decorated' && css`
-        &:hover {
+        &:hover, &.active {
             &::before {
                 height: 10px;
             }
@@ -42,6 +42,4 @@ export const Link = styled.a<LinkProps & { active?: boolean }>`
             `}
         }
     `}
-            
-
 `

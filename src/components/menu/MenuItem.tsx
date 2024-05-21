@@ -1,15 +1,18 @@
 import React from 'react';
-import {Link, LinkProps} from "../Link";
+import {LinkProps, NavLink} from "../Link";
 import {MenuProps} from "./Menu";
 import {S} from "./Menu_Styles";
 
 export const MenuItem: React.FC<MenuProps & LinkProps> = (props: MenuProps & LinkProps) => {
     return (
         <ul>
-            {props.menuItems?.map((item, index) => {
+            {props.items?.map((item, index) => {
                 return <S.ListItem key={index}>
-                    <Link href="" type={props.type}
-                    >{item}</Link>
+                    <NavLink activeClass='active'
+                             spy={true}
+                             offset={70}
+                        to={item.href} smooth={true} type={props.type}
+                    >{item.title}</NavLink>
                 </S.ListItem>
             })}
         </ul>

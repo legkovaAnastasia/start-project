@@ -6,7 +6,26 @@ import {FlexWrapper} from "../../components/FlexWrapper";
 import {MobileMenu} from "../../components/menu/MobileMenu";
 import {S} from "./Header_Styles";
 
-const items = ['Home', 'Skills', 'Works', 'About Me', 'Contacts']
+const items = [
+    {
+        title: 'Home',
+        href: 'home'
+    },
+    {
+        title: 'Skills',
+        href: 'skills'
+    },
+    {
+        title: 'Works',
+        href: 'works'
+    },{
+        title: 'About Me',
+        href: 'aboutme'
+    },{
+        title: 'Contact',
+        href: 'contact'
+    },
+]
 export const Header: React.FC = () => {
 
     const [width, setWidth] = React.useState(window.innerWidth);
@@ -24,8 +43,8 @@ export const Header: React.FC = () => {
                 <FlexWrapper justify={"space-between"} align={"center"}>
                     <Logo/>
                     {width < breakpoint ?
-                        <MobileMenu menuItems={items} type={'decorated'}/> :
-                        <Menu menuItems={items} type={'decorated'} ulType={'headerMenu'}/>
+                        <MobileMenu items={items}  type={'decorated'}/> :
+                        <Menu items={items} type={'decorated'} ulType={'headerMenu'}/>
                     }
                 </FlexWrapper>
             </Container>
