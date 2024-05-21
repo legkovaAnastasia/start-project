@@ -3,6 +3,7 @@
     display: inline-block;
     width: 10px;
     height: 10px;
+    transition: .2s ease-in-out;
     background-color: #DBEBEA;
     border-radius: 20px;
 }

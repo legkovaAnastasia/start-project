@@ -23,13 +23,14 @@ export const Button = styled.button`
         content: '';
         display: inline-block;
         height: 10px;
-        width: 100%;
+        width: 50%;
         background-color: ${theme.colors.secondary};
         position: absolute;
         z-index: -1;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
+        transition: ${theme.animation.transition};
     }
 
 `

@@ -14,7 +14,7 @@ export const AboutMe: React.FC = () => {
                 <SectionTitle>About Me</SectionTitle>
                 <FlexWrapper direction={"column"} align={"center"}>
                     <S.IconWrapper>
-                        <Icon iconId={'quote'}/>
+                        <Icon iconId={'quote'} />
                     </S.IconWrapper>
                     <Slider/>
                 </FlexWrapper>
@@ -27,6 +27,5 @@ const StyledAbout = styled.section`
 
     ${S.IconWrapper} {
         margin: 30px 0 72px;
-        padding-top: 60px;
     }
 `

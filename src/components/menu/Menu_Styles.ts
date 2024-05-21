@@ -41,20 +41,28 @@ const MobileMenuPopUp = styled.div<{ isOpen: boolean }>`
     bottom: 0;
     z-index: 999;
     background-color: rgba(38, 50, 56, 0.8);
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: .5s ease-in-out;
 
-    ${props => props.isOpen && css<{ isOpen: boolean }>`
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    `}
     ul {
         display: flex;
-        gap: 30px;
+        gap: 10px;
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        transition: .5s ease-in-out;
     }
+    
+    ${props => props.isOpen && css<{ isOpen: boolean }>`
+        transform: translateY(0);
+        
+        & ul {
+            gap: 30px;
+        }
+    `}
 `
 
 const BurgerBtn = styled.button<{ isOpen: boolean }>`
