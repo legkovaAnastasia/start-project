@@ -11,8 +11,6 @@ const StyledWorks = styled.section`
 `
 const StyledWork = styled.div`
     background-color: ${theme.colors.text};
-    width: 330px;
-    flex-grow: 1;
 
     ${NavLink} {
         padding: 10px 0;
@@ -20,10 +18,6 @@ const StyledWork = styled.div`
         & + ${NavLink} {
             margin-left: 20px;
         }
-    }
-
-    @media ${theme.media.desktop} {
-        max-width: 540px;
     }
 `
 

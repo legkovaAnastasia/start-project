@@ -50,7 +50,10 @@ export const Skills = () => {
             <Container>
                 <SectionTitle>Skills</SectionTitle>
                 <FlexWrapper wrap="wrap" justify="space-between">
-                    <Fade cascade={true} damping={0.2}>
+                    <Fade cascade={true} damping={0.2} style={{
+                        width: '330px', padding: '60px 20px 40px',
+                        flexGrow: 1
+                    }}>
                         {skillsData.map((skill, index) => {
                             return <Skill key={index}
                                           iconId={skill.iconId}

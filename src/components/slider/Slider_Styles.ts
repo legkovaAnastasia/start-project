@@ -8,7 +8,6 @@ const StyledSlider = styled.div`
     flex-direction: column;
     align-items: center;
     text-align: center;
-    border: 1px solid blue;
 `
 
 const Slide = styled.div`

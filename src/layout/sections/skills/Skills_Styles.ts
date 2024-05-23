@@ -5,9 +5,6 @@ const StyledSkills = styled.section`
 `
 
 const StyledSkill = styled.div`
-    width: 330px;
-    padding: 60px 20px 40px;
-    flex-grow: 1;
     
     @media ${theme.media.mobile} {
         padding: 60px 0 40px;
