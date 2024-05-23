@@ -1,9 +1,10 @@
 import React from 'react';
- import {FlexWrapper} from "../../../components/FlexWrapper";
+import {FlexWrapper} from "../../../components/FlexWrapper";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Skill} from "./skil/Skill";
 import {Container} from "../../../components/Container";
 import {S} from "./Skills_Styles";
+import {Fade} from "react-awesome-reveal";
 
 const skillsData = [
     {
@@ -49,16 +50,18 @@ export const Skills = () => {
             <Container>
                 <SectionTitle>Skills</SectionTitle>
                 <FlexWrapper wrap="wrap" justify="space-between">
-                    {skillsData.map((skill, index) => {
-                        return <Skill key={index}
-                                      iconId={skill.iconId}
-                                      title={skill.title}
-                                      description={skill.description}
-                                      viewBox={skill.viewBox}
-                                      height={skill.height}
-                                      width={skill.width}
-                        />
-                    })}
+                    <Fade cascade={true} damping={0.2}>
+                        {skillsData.map((skill, index) => {
+                            return <Skill key={index}
+                                          iconId={skill.iconId}
+                                          title={skill.title}
+                                          description={skill.description}
+                                          viewBox={skill.viewBox}
+                                          height={skill.height}
+                                          width={skill.width}
+                            />
+                        })}
+                    </Fade>
                 </FlexWrapper>
             </Container>
         </S.StyledSkills>
